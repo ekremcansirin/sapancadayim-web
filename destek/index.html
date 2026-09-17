@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sapancadayım uygulaması için destek: sık sorulanlar, hesap silme, iletişim.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Destek — Sapancadayım">
+<meta property="og:description" content="Sorun, öneri ve hesap işlemleri için destek sayfası.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sapancadayim.com/destek/">
+<meta property="og:locale" content="tr_TR">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://sapancadayim.com/destek/">
+<title>Destek — Sapancadayım</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  /* index.html ile aynı palet ve tipografi — ikisi birlikte değiştirilmeli.
+     Tek temaya bağlı, bilerek: beyaz zemin marka kimliğinin parçası. */
+  :root {
+    --ground: #FFFFFF;
+    --ink: #0C2A22;
+    --muted: #64796F;
+    --brand: #059669;
+    --line: #E4EBE6;
+    --display: "Baloo 2", "Trebuchet MS", sans-serif;
+    --body: "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-inline: 24px;
+    padding-block: 72px 56px;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--brand); margin-bottom: 18px;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+  h1 {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(27px, 5.6vw, 36px); line-height: 1.16; margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 36px; }
+  h2 {
+    font-family: var(--display); font-weight: 600;
+    font-size: 19px; line-height: 1.3; margin: 34px 0 8px;
+  }
+  p { margin: 0 0 12px; color: var(--ink); }
+  a { color: var(--brand); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 3px; }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14.5px; color: var(--muted);
+  }
+  footer b { font-family: var(--display); font-weight: 600; color: var(--ink); }
+  @media (max-width: 480px) { .page { padding-block: 52px 40px; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <span class="eyebrow"><span class="dot"></span>Sapancadayım</span>
+
+  <h1>Destek</h1>
+  <p class="updated">Bir sorun mu var, bir şey mi eksik? Yaz, dönüş yapalım.</p>
+
+  <h2>Bize ulaş</h2>
+  <p><a href="mailto:info@sapancadayim.com">info@sapancadayim.com</a></p>
+  <p>Genelde birkaç gün içinde dönüş yapılır. Bir hata bildiriyorsan telefon modelini ve
+  ne yaptığında olduğunu yazarsan çok yardımcı olur.</p>
+
+  <h2>İşletme bilgim yanlış / eksik</h2>
+  <p>Uygulamadaki işletme bilgileri halka açık kaynaklardan derlendi; yanlış ya da eski
+  olabilir. Doğrusunu yaz, düzeltelim.</p>
+
+  <h2>İşletmemi eklemek istiyorum</h2>
+  <p>Sapanca’da bir işletmen varsa ekleyebiliriz. İşletme adı, adres, telefon ve varsa
+  Instagram hesabınla birlikte yaz.</p>
+
+  <h2>Hesabımı silmek istiyorum</h2>
+  <p>Uygulama içinden silebilirsin: sağ üstteki profiline dokun, aşağıdaki
+  <strong>“Hesabımı Sil”</strong> seçeneğini kullan. İşlem anında ve kalıcıdır; hesap
+  bilgilerinin tamamı silinir, geri getirilemez. Bize ayrıca yazmana gerek yok.</p>
+
+  <h2>Bildirimleri istemiyorum</h2>
+  <p>Telefonunun ayarlarından sapancadayım için bildirimleri kapatabilirsin. Bildirimler
+  herkese toplu gönderilir, kişiye özel takip yapılmaz.</p>
+
+  <h2>Konum izni</h2>
+  <p>Konum yalnızca sana en yakın mekanları sıralamak için kullanılır ve telefonundan
+  dışarı çıkmaz. Kapatırsan sadece mesafeler görünmez, uygulama çalışmaya devam eder.</p>
+
+  <h2>Gizlilik</h2>
+  <p>Hangi bilgilerin saklandığını <a href="/gizlilik/">gizlilik politikasında</a>
+  bulabilirsin.</p>
+
+  <footer>
+    <b>sapancadayim.com</b>
+    <span>Sapanca, Sakarya</span>
+    <a href="mailto:info@sapancadayim.com">info@sapancadayim.com</a>
+    <a href="/gizlilik/">Gizlilik Politikası</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
