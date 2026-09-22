@@ -103,10 +103,45 @@
   .badge-text small { font-family: var(--body); font-weight: 400; font-size: 10px;
     letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 
+  /* Sapanca şeridi */
+  .strip { height: clamp(200px, 30vw, 320px); border-radius: 18px; }
+
+  /* Özellik kutuları */
+  .section-title {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .section-lede { margin: 0 0 36px; color: var(--muted); max-width: 52ch; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .card {
+    background: var(--ground);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 24px;
+  }
+  .card-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: var(--wash);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brand);
+    margin-bottom: 14px;
+  }
+  .card h3 {
+    font-family: var(--display); font-weight: 600; font-size: 19px;
+    margin: 0 0 6px;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: 16px; }
+
   @media (max-width: 800px) {
     .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 36px 56px; }
     .phone { max-width: 260px; }
     .section { padding-block: 52px; }
+    .cards { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -155,6 +190,65 @@
            .slot satırını sil, aşağıdaki img'i aç. -->
       <div class="slot" aria-hidden="true">Uygulama ekran görüntüsü buraya</div>
       <!-- <img src="/assets/ekran.png" alt="Sapancadayım uygulamasının ana ekranı"> -->
+    </div>
+  </section>
+  <div class="wrap">
+    <!-- Sapanca fotoğrafı hazır olunca: assets/sapanca.jpg ekle,
+         .slot satırını sil, aşağıdaki img'i aç. -->
+    <div class="slot strip" aria-hidden="true">Sapanca fotoğrafı buraya &mdash; geniş, yatay</div>
+    <!-- <img class="strip" src="/assets/sapanca.jpg" alt="Sapanca Gölü kıyısı"> -->
+  </div>
+
+  <section class="section section-wash">
+    <div class="wrap">
+      <h2 class="section-title">Uygulamada neler var?</h2>
+      <p class="section-lede">Dört bölüm: gezmek için rehber, yaşamak için pratik bilgi, konakladığın yere sipariş ve konumuna göre en yakını.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/>
+            </svg>
+          </div>
+          <h3>Keşfet &amp; Rehber</h3>
+          <p>Kahvaltı, bungalov, villa, kafe, doğa ve aktivite. Telefonu ve yol tarifi tek dokunuş uzakta.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="6" width="18" height="14" rx="3"/>
+              <path d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"/>
+              <path d="M12 10.5v5M9.5 13h5"/>
+            </svg>
+          </div>
+          <h3>Sapanca Yaşam</h3>
+          <p>Taksi, nöbetçi eczane, veteriner, yakıt ve şarj, usta ve çilingir, tren saatleri.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h11v9H4z"/><path d="M15 10h4l2 3v3h-6z"/>
+              <circle cx="7.5" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/>
+            </svg>
+          </div>
+          <h3>Bungalova Kurye</h3>
+          <p>Konakladığın yere market, yemek ve ihtiyaç siparişi. Adres tarif etmekle uğraşma.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s7-5.6 7-10.4A7 7 0 0 0 5 10.6C5 15.4 12 21 12 21z"/>
+              <circle cx="12" cy="10.5" r="2.4"/>
+            </svg>
+          </div>
+          <h3>Yakınımda</h3>
+          <p>Konumuna göre en yakın mekanlar, mahalle mahalle sıralı.</p>
+        </article>
+      </div>
     </div>
   </section>
 </main>
