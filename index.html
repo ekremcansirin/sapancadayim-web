@@ -150,6 +150,40 @@
   .qr-box { opacity: 0.55; }
   .qr-note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
 
+  /* SSS */
+  .faq { max-width: 680px; }
+  .faq details {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-family: var(--display); font-weight: 600; font-size: 18px;
+    list-style: none;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+";
+    font-weight: 600; color: var(--brand); font-size: 22px; line-height: 1;
+  }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq summary:focus-visible {
+    outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 3px;
+  }
+  .faq p { margin: 12px 0 0; color: var(--muted); }
+
+  /* Footer */
+  footer.site {
+    border-top: 1px solid var(--line);
+    padding-block: 28px 40px;
+  }
+  footer.site .wrap {
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-size: 14.5px; color: var(--muted);
+  }
+  footer.site b { font-family: var(--display); font-weight: 600; color: var(--ink); }
+
   @media (max-width: 800px) {
     .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 36px 56px; }
     .phone { max-width: 260px; }
@@ -282,7 +316,44 @@
       </div>
     </div>
   </section>
+  <section class="section section-wash">
+    <div class="wrap faq">
+      <h2 class="section-title">Sık sorulanlar</h2>
+
+      <details>
+        <summary>Uygulama ücretsiz mi?</summary>
+        <p>Evet, ücretsiz.</p>
+      </details>
+
+      <details>
+        <summary>Hangi telefonlarda çalışıyor?</summary>
+        <p>iPhone ve Android telefonlarda.</p>
+      </details>
+
+      <details>
+        <summary>İşletmemi nasıl eklerim?</summary>
+        <p><a href="mailto:info@sapancadayim.com">info@sapancadayim.com</a> adresine yaz, işletmeni birlikte ekleyelim.</p>
+      </details>
+
+      <details>
+        <summary>&ldquo;Sapancadayım Onaylı&rdquo; rozeti ne demek?</summary>
+        <p>Bu işletmenin telefon, adres ve görsel bilgileri doğrudan işletme sahibinden alınmış, yayına girmeden önce teyit edilmiştir. Rozet, işletmenin gerçekten faaliyette olduğunu gösterir.</p>
+        <p>Sunulan hizmetin kalitesi ya da yapacağınız rezervasyon ve ödeme ilişkisinin güvencesi anlamına gelmez. Kapora veya ön ödeme yapmadan önce işletmeyle doğrudan görüşmenizi öneririz.</p>
+      </details>
+    </div>
+  </section>
 </main>
+
+<footer class="site">
+  <div class="wrap">
+    <b>sapancadayim.com</b>
+    <span>Sapanca, Sakarya</span>
+    <a href="mailto:info@sapancadayim.com">info@sapancadayim.com</a>
+    <a href="/gizlilik/">Gizlilik Politikası</a>
+    <a href="/destek/">Destek</a>
+  </div>
+</footer>
+
 
 </body>
 </html>
