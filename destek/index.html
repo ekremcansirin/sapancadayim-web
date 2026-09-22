@@ -16,28 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="/style.css">
 <style>
-  /* index.html ile aynı palet ve tipografi — ikisi birlikte değiştirilmeli.
-     Tek temaya bağlı, bilerek: beyaz zemin marka kimliğinin parçası. */
-  :root {
-    --ground: #FFFFFF;
-    --ink: #0C2A22;
-    --muted: #64796F;
-    --brand: #059669;
-    --line: #E4EBE6;
-    --display: "Baloo 2", "Trebuchet MS", sans-serif;
-    --body: "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 17px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
   .page {
     max-width: 640px;
     margin: 0 auto;
@@ -61,9 +41,6 @@
     font-size: 19px; line-height: 1.3; margin: 34px 0 8px;
   }
   p { margin: 0 0 12px; color: var(--ink); }
-  a { color: var(--brand); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--ink); }
-  a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 3px; }
   footer {
     margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
     display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14.5px; color: var(--muted);

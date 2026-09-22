@@ -1,0 +1,46 @@
+/* sapancadayim.com — paylaşılan tasarım değişkenleri.
+   Dört sayfa da bunu bağlar. Yalnızca değişkenler ve sıfırlama burada;
+   sayfaya özgü düzen kuralları kendi dosyasında kalır.
+
+   Tek temaya bağlı, bilerek: beyaz zemin marka kimliğinin parçası.
+   Bu yüzden her renk açıkça boyanıyor, hiçbiri host temasından miras alınmıyor.
+   prefers-color-scheme kuralı EKLENMEYECEK. */
+
+:root {
+  --ground: #FFFFFF;
+  --ink: #0C2A22;
+  /* #64796F idi. --wash zemini üstünde 4.41:1 veriyordu, AA eşiği 4.5:1.
+     #5E7369 beyazda 5.08:1, --wash üstünde 4.80:1 — ikisi de geçiyor. */
+  --muted: #5E7369;
+  --brand: #059669;
+  --line: #E4EBE6;
+  --wash: #F4FAF7;
+  --display: "Baloo 2", "Trebuchet MS", sans-serif;
+  --body: "Source Sans 3", -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+a {
+  color: var(--brand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--ink); }
+a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
