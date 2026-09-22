@@ -137,11 +137,26 @@
   }
   .card p { margin: 0; color: var(--muted); font-size: 16px; }
 
+  /* QR bölümü */
+  .qr-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+  .qr-box { aspect-ratio: 1; border-radius: 16px; }
+  /* Uygulama mağazada olmadığı için kutu soluk duruyor.
+     YAYIN GÜNÜ: aşağıdaki opacity kuralı silinecek. */
+  .qr-box { opacity: 0.55; }
+  .qr-note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+
   @media (max-width: 800px) {
     .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 36px 56px; }
     .phone { max-width: 260px; }
     .section { padding-block: 52px; }
     .cards { grid-template-columns: 1fr; }
+    .qr-row { grid-template-columns: 1fr; gap: 24px; justify-items: start; }
+    .qr-box { width: 180px; }
   }
 </style>
 </head>
@@ -248,6 +263,22 @@
           <h3>Yakınımda</h3>
           <p>Konumuna göre en yakın mekanlar, mahalle mahalle sıralı.</p>
         </article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap qr-row">
+      <div>
+        <!-- YAYIN GÜNÜ (2/3): QR hazır olunca assets/qr.png ekle,
+             .slot satırını sil, img'i aç, .qr-box opacity kuralını kaldır.
+             QR şu adrese bakmalı: https://sapancadayim.com/indir/ -->
+        <div class="slot qr-box" aria-hidden="true">QR kodu buraya</div>
+        <!-- <img class="qr-box" src="/assets/qr.png" alt="Uygulamayı indirmek için QR kodu"> -->
+      </div>
+      <div>
+        <h2 class="section-title">Telefonunla okut, buradan indir.</h2>
+        <p class="section-lede" style="margin-bottom:0">Kodu kameranla okut; seni telefonuna uygun mağazaya götürsün.</p>
+        <p class="qr-note">Uygulama henüz yayında değil. Kod, çıktığı gün burada çalışır durumda olacak.</p>
       </div>
     </div>
   </section>
