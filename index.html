@@ -90,6 +90,7 @@
     background: var(--wash);
   }
   .phone .slot { height: 100%; border: 0; border-radius: 0; }
+  .phone img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
   /* Mağaza rozetleri */
   .badges { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -236,10 +237,7 @@
     </div>
 
     <div class="phone">
-      <!-- Ekran görüntüsü hazır olunca: assets/ekran.png ekle,
-           .slot satırını sil, aşağıdaki img'i aç. -->
-      <div class="slot" aria-hidden="true">Uygulama ekran görüntüsü buraya</div>
-      <!-- <img src="/assets/ekran.png" alt="Sapancadayım uygulamasının ana ekranı"> -->
+      <img src="/assets/ekran.jpg" alt="Sapancadayım uygulamasının ana ekranı" width="600" height="1304">
     </div>
   </section>
   <div class="wrap">
@@ -304,11 +302,9 @@
   <section class="section">
     <div class="wrap qr-row">
       <div>
-        <!-- YAYIN GÜNÜ (2/3): QR hazır olunca assets/qr.png ekle,
-             .slot satırını sil, img'i aç, .qr-box opacity kuralını kaldır.
-             QR şu adrese bakmalı: https://sapancadayim.com/indir/ -->
-        <div class="slot qr-box" aria-hidden="true">QR kodu buraya</div>
-        <!-- <img class="qr-box" src="/assets/qr.png" alt="Uygulamayı indirmek için QR kodu"> -->
+        <!-- YAYIN GÜNÜ (2/3): QR eklendi (hedef https://sapancadayim.com/indir/).
+             Yayın günü sadece .qr-box opacity kuralını kaldır. -->
+        <img class="qr-box" src="/assets/qr.png" alt="Uygulamayı indirmek için QR kodu">
       </div>
       <div>
         <h2 class="section-title">Telefonunla okut, buradan indir.</h2>
