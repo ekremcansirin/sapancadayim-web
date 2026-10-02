@@ -104,8 +104,6 @@
   .badge-text small { font-family: var(--body); font-weight: 400; font-size: 10px;
     letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 
-  /* Sapanca şeridi */
-  .strip { height: clamp(200px, 30vw, 320px); border-radius: 18px; }
 
   /* Özellik kutuları */
   .section-title {
@@ -240,14 +238,21 @@
       <img src="/assets/ekran.jpg" alt="Sapancadayım uygulamasının ana ekranı" width="600" height="1304">
     </div>
   </section>
-  <div class="wrap">
-    <!-- Sapanca fotoğrafı hazır olunca: assets/sapanca.jpg ekle,
-         .slot satırını sil, aşağıdaki img'i aç. -->
-    <div class="slot strip" aria-hidden="true">Sapanca fotoğrafı buraya &mdash; geniş, yatay</div>
-    <!-- <img class="strip" src="/assets/sapanca.jpg" alt="Sapanca Gölü kıyısı"> -->
-  </div>
-
   <section class="section section-wash">
+    <div class="wrap qr-row">
+      <div>
+        <!-- YAYIN GÜNÜ (2/3): QR eklendi (hedef https://sapancadayim.com/indir/).
+             Yayın günü sadece .qr-box opacity kuralını kaldır. -->
+        <img class="qr-box" src="/assets/qr.png" alt="Uygulamayı indirmek için QR kodu">
+      </div>
+      <div>
+        <h2 class="section-title">Telefonunla okut, buradan indir.</h2>
+        <p class="section-lede" style="margin-bottom:0">Kodu kameranla okut; seni telefonuna uygun mağazaya götürsün.</p>
+        <p class="qr-note">Uygulama henüz yayında değil. Kod, çıktığı gün burada çalışır durumda olacak.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
     <div class="wrap">
       <h2 class="section-title">Uygulamada neler var?</h2>
       <p class="section-lede">Dört bölüm: gezmek için rehber, yaşamak için pratik bilgi, konakladığın yere sipariş ve konumuna göre en yakını.</p>
@@ -296,20 +301,6 @@
           <h3>Yakınımda</h3>
           <p>Konumuna göre en yakın mekanlar, mahalle mahalle sıralı.</p>
         </article>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap qr-row">
-      <div>
-        <!-- YAYIN GÜNÜ (2/3): QR eklendi (hedef https://sapancadayim.com/indir/).
-             Yayın günü sadece .qr-box opacity kuralını kaldır. -->
-        <img class="qr-box" src="/assets/qr.png" alt="Uygulamayı indirmek için QR kodu">
-      </div>
-      <div>
-        <h2 class="section-title">Telefonunla okut, buradan indir.</h2>
-        <p class="section-lede" style="margin-bottom:0">Kodu kameranla okut; seni telefonuna uygun mağazaya götürsün.</p>
-        <p class="qr-note">Uygulama henüz yayında değil. Kod, çıktığı gün burada çalışır durumda olacak.</p>
       </div>
     </div>
   </section>
